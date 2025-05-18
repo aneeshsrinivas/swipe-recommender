@@ -1,5 +1,6 @@
 // src/CardDecoration.js
 import React from "react";
+import "./cardDecoration.css";
 
 export default function CardDecoration() {
   return (
@@ -31,3 +32,4 @@ export default function CardDecoration() {
     </svg>
   );
 }
+

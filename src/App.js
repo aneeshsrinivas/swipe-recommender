@@ -1,5 +1,6 @@
 import './App.css';
 import './styles.css';  // Only one import of styles.css here
+import CardDecoration from './CardDecoration';
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti";
