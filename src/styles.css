@@ -1,0 +1,269 @@
+/* General App Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  min-height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+/* Dark mode */
+.dark-mode {
+  color: #eee;
+  background-color: #111 !important;
+}
+
+/* Card Styles */
+.card-area {
+  width: 320px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1200px;
+  margin-top: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  text-align: center;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: grab;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.card-category {
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.like-btn,
+.dislike-btn {
+  font-size: 2.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-btn {
+  background-color: #ff4d6d;
+}
+
+.like-btn:hover {
+  background-color: #ff6b8d;
+  transform: scale(1.1);
+}
+
+.dislike-btn {
+  background-color: #444;
+}
+
+.dislike-btn:hover {
+  background-color: #666;
+  transform: scale(1.1);
+}
+
+/* Summary Section */
+.liked-list {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 16px;
+  color: #111;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.liked-list h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.liked-list h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.liked-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.liked-list li {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.liked-list .emoji {
+  font-size: 1.5rem;
+}
+
+.liked-list .category {
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.reset-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin-top: 25px;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.reset-btn:hover {
+  background-color: #444;
+}
+
+/* Settings Panel */
+.settings {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+/* Scrollbar for summary list */
+.liked-list ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.liked-list ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .card-area {
+    width: 90vw;
+    height: 380px;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+.app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 40px;
+}
+
+.reset-btn {
+  background: #444;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #666;
+}
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: #eee !important;
+}
+
+.settings {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.card-area {
+  margin-top: 60px;
+}
+
+.swipe-hint {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.summary ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.summary li {
+  font-size: 16px;
+}
+
+.summary button {
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
